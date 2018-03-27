@@ -14,19 +14,8 @@ interface ServerActionInterface
 
     /**
      * @param ServerRequestInterface $request
-     * @return $this
-     */
-    public function setServerRequest(ServerRequestInterface $request);
-
-    /**
-     * @param ResponseInterface $response
-     * @return $this;
-     */
-    public function setPreviousResponse(ResponseInterface $response);
-
-    /**
      * @return ResponseInterface
      */
-    public function __invoke(): ResponseInterface;
+    public function __invoke(ServerRequestInterface $request): ResponseInterface;
 
 }
